@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | DOM</title>
+</head>
+<body>
+    <!-- document, window,id , Class ,querySelector, Tag
+    Prompt , Confirm, alert, InnerHTML and InnerText -->
+    
+    <h1>Hello Javscript Bootcamp2.0</h1>
+    <ul>
+
+
+    </ul>
+    <button onclick="maths()" id="fsjs2">Submit</button>
+    <p id="js"></p>
+
+    <script>
+        // insert inner HTML
+        const list =`
+         <li>Azhar</li>
+         <li>Deepak</li>
+         <li>Sumant</li>
+         <li>Noor</li>
+         <li>SErajul</li>
+        `;
+
+        const ul = document.querySelector("ul")
+        ul.innerHTML = list;
+        
+
+        // Create Element on Screen
+        let azhar = document.createElement("h2")
+        azhar.className = "fsjss";
+        azhar.style.fontSize= "20px";
+        azhar.style.color = "Yellow";
+        azhar.style.backgroundColor = "black";
+        azhar.textContent = "Creating New Element using javascript";
+        console.log(azhar)
+        document.body.appendChild(azhar)
+
+    //   Remove Child
+        // document.body.removeChild(azhar);
+
+        // for loop
+        for (let i=0; i<3; i++){
+        let para = document.createElement("p");
+        para.className= "FS";
+        para.style.fontSize = "15px";
+        para.style.color = "green";
+        para.style.marginLeft = "100px";
+        para.textContent = i;
+        console.log(para);
+        document.body.appendChild(para);
+        }
+
+        function maths(){
+            let value = prompt("solve this 70-30");
+            if (value==40){
+                document.getElementById("js").innerText = "Success Redirect";
+                document.getElementById("fsjs2").style.backgroundColor = "Blue";
+                document.getElementById("fsjs2").style.color = "Red";
+            }
+            else{
+                document.getElementById("js").innerText = "Fail try again";
+                document.getElementById("fsjs2").style.backgroundColor = "red";
+                document.getElementById("fsjs2").style.color ="yellow"; 
+            }
+        }
+
+    </script>
+</body>
+</html>

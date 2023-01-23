@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h1>Learning Event Listener</h1>
+    <p id="js">Event Listener</p>
+    <p id="js2"></p>
+    <p id="js3"></p>
+    <p id="js4"></p>
+    <p id="js5"></p>
+    <p id="js6"></p>
+    <p id="js7"></p>
+    <p id="js8"></p>
+    <p id="js9"></p>
+    <p id="js10"></p>
+<!-- 
+    /*
+        - Click
+        - dblclick
+        - mouseeneter
+        - mouseleave
+        - moveover
+        - input
+        - keydown
+        - keyup
+        - keypress
+        - onload
+        */ -->
+    <script>
+        document.addEventListener("click", hello);
+        function hello() {
+        //    let circle = document.createElement("div")
+        //    circle.className = "open";
+        //    circle.style.width ="15px";
+        //    circle.style.height = "15px";
+        //    circle.style.borderRadius = "50%";
+        //    circle.style.backgroundColor = "red";
+        //    document.body.appendChild(circle);
+         
+            document.getElementById("js").innerText = "Mouse Clicked";
+        }
+
+        document.addEventListener("dblclick", hello2);
+        function hello2(){
+            document.getElementById("js2").innerText = "Mouse doubleclicked";
+        }
+
+        document.addEventListener("mouseenter", hello3);
+        function hello3(){
+            document.getElementById("js3").innerText = "Mouse Entered";
+        }
+
+        document.addEventListener("mouseleave", hello4);
+        function hello4(){
+            document.getElementById("js4").innerText = "Mouse leaved";
+        }
+
+        document.addEventListener("moveover", hello5);
+        function hello5(){
+            document.getElementById("js5").innerText = "MoveOver";
+        }
+
+        document.addEventListener("input", hello6);
+        function hello6(){
+            document.getElementById("js6").innerText = "You input some text";
+        }
+
+        document.addEventListener("keydown", hello7);
+        function hello7(){
+            document.getElementById("js7").innerText = "You pressed key down Button";
+        }
+
+        document.addEventListener("keyup", hello8);
+        function hello8(){
+            document.getElementById("js8").innerText = "You pressed upper key";
+        }
+
+        document.addEventListener("keypress", hello9);
+        function hello9(){
+            document.getElementById("js9").innerText = "You pressed any key on keyboard";
+        }
+
+        document.addEventListener("onload", hello10);
+        function hello10(){
+            document.getElementById("js10").innerText = "loaded the page";
+        }
+    </script>
+</body>
+</html>

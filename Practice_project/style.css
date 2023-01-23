@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  font-family: sans-serif;
+}
+
+button{
+    background-color: purple;
+    padding: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
